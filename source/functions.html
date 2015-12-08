@@ -1,0 +1,57 @@
+<section>
+  {% with active=active %}{% include "source/toc.html" %}{% endwith %}
+  <section data-markdown>
+    <script type="text/template">
+      ##Functions
+
+      * You can group code into **functions**
+      * You can then call your function many times and therefore re-use your code
+      * Functions accept **arguments** and **keyword arguments**
+      * Functions have **return values**
+      * You can define a function like this:
+
+<pre><code>def function_name(arg1, arg2, kwarg1=None, kwarg2=None):
+  result = arg1 + arg2
+  return result
+</pre></code>
+
+      * You can call a function like this:
+
+<pre><code>result = function_name(1, 2, kwarg1="Hello"):
+print(result)
+</pre></code>
+
+    </script>
+  </section>
+
+  <section>
+      <h2>Exercise</h2>
+
+      <ul>
+        <li>Let's put our main program into a function in <strong>birthday.py</strong></li>
+      </ul>
+
+<pre><code data-trim>
+import sys
+
+BIRTHDAY = "1982-09-08"
+
+def main():
+    age = None
+    try:
+        age = int(sys.argv[1])
+    except ValueError:
+        print("ERROR: Please enter an integer")
+        return
+
+    if age < 0:
+        print("ERROR: Negative ages are not allowed")
+        return
+    else:
+        message = "I am born {} and I am {} years old".format(BIRTHDAY, age)
+        print(message)
+
+main()
+</code></pre>
+  </section>
+</section>

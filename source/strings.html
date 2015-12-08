@@ -1,0 +1,64 @@
+<section>
+  {% with active=active %}{% include "source/toc.html" %}{% endwith %}
+  <section data-markdown>
+    <script type="text/template">
+      ##Strings
+
+      * Strings are the most common data type
+        * Some programming languages also have **Char** as a data type
+        * A char is a single character
+        * Therefore, a whole word, is a long *string of characters*
+      * The syntax for defining a string is this:
+        <pre><code>variable_name = "Your string"</code></pre>
+    </script>
+  </section>
+
+  <section data-markdown>
+    <script type="text/template">
+      ##Strings
+
+      * Like all things in Python, Strings are also Objects
+      * We will learn more about those later
+      * The cool thing about Objects is that they usually have useful methods
+      * Strings have a [ton of useful methods](https://docs.python.org/2/library/stdtypes.html#string-methods)
+      * You can call string methods like this:
+        <pre><code>my_string = "Hello World!"
+my_string = my_string.upper()
+print(my_string)
+        </code></pre>
+      * The output should look like this:
+        <pre><code>> HELLO WORLD!</code></pre>
+    </script>
+  </section>
+
+  <section data-markdown>
+    <script type="text/template">
+      ##Strings
+
+      * One especially useful method of the String object is **format()**
+      * It allows you to add placeholders into your strings
+      * Then you can fill in variable values into those placeholders
+      * It looks like this:
+        <pre><code>my_age = 33
+my_string = "I am {} years old".format(my_age)
+print(my_string)
+        </code></pre>
+      * The output should look like this:
+        <pre><code>> I am 33 years old</code></pre>
+    </script>
+  </section>
+
+  <section>
+      <h2>Exercise</h2>
+
+      <ul>
+        <li>Change <strong>birthday.py</strong> to look like this:</li>
+      </ul>
+
+<pre><code data-trim>
+BIRTHDAY = "1982-09-08"
+message = "I am born on {}".format(BIRTHDAY)
+print(message)
+</code></pre>
+  </section>
+</section>

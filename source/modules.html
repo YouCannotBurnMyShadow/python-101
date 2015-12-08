@@ -1,0 +1,105 @@
+<section>
+  {% with active=active %}{% include "source/toc.html" %}{% endwith %}
+  <section data-markdown>
+    <script type="text/template">
+      ##Modules
+
+      * Every ***.py** file is a Python module
+      * To keep your code easy to read and easy to maintain, you should split it into small modules
+      * When two ***.py** files are in the same folder, they can import each other
+      * When you **import** a module, Python will try to execute all the code in that module
+      * This means, if you would import our **birthday.py** module, the import would crash
+        * Because the birthday program requires a command line argument
+    </script>
+  </section>
+
+  <section>
+      <h2>Exercise</h2>
+
+      <ul>
+        <li>We already have a few useful functions (<em>get_weekday</em> and <em>get_future_date</em>)</li>
+        <li>It would be grat if we could import them in our Python programs without crashing</li>
+        <li>Create a new file <strong>birth_date.py</strong> and move the functions into that file:</li>
+      </ul>
+
+<pre><code data-trim>
+import datetime
+from settings import BIRTHDAY
+
+def get_future_date(age):
+    date_object = datetime.datetime.strptime(BIRTHDAY, '%Y-%m-%d')
+    future_date = datetime.date(
+        date_object.year + age,
+        date_object.month,
+        date_object.day
+    )
+    return future_date
+
+def get_weekday(weekday_number):
+    weekdays = [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday",
+    ]
+    return weekdays[weekday_number - 1]
+</code></pre>
+
+      <ul>
+        <li>We didn't really add any new code, we just moved old code into a new file</li>
+      </ul>
+  </section>
+
+  <section>
+      <h2>Exercise</h2>
+
+      <ul>
+        <li>Create another new file <strong>settings.py</strong>:</li>
+      </ul>
+
+<pre><code>BIRTHDAY = "1982-09-08"</code></pre>
+
+      <ul>
+        <li>This is just to demonstrate how your programs could have settings files</li>
+      </ul>
+    </script>
+  </section>
+
+  <section>
+      <h2>Exercise</h2>
+
+      <ul>
+        <li>Finally, remove the code that we have just moved from <strong>birthday.py</strong>:</li>
+
+<pre><code data-trim>
+import sys
+from birth_date import get_future_date, get_weekday
+
+def main():
+    age = None
+    try:
+        age = int(sys.argv[1])
+    except ValueError:
+        print("ERROR: Please enter an integer")
+        return
+
+    if age < 0:
+        print("ERROR: Negative ages are not allowed")
+        return
+    else:
+        future_date = get_future_date(age)
+        weekday = get_weekday(future_date.isoweekday())
+        message = "I will turn {} on {}, {}".format(age, weekday, future_date)
+        print(message)
+
+main()
+</code></pre>
+
+      <ul>
+        <li>Note that we are now importing our moved-away functions</li>
+      </ul>
+  </section>
+</section>

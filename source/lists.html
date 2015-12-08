@@ -1,0 +1,92 @@
+<section>
+  {% with active=active %}{% include "source/toc.html" %}{% endwith %}
+  <section data-markdown>
+    <script type="text/template">
+      ##Lists
+
+      * You can store many values into lists
+      * You can add or remove items from lists
+      * You can define an empy list like this
+        <pre><code>my_variable = []</code></pre>
+      * You can define a list with initial elements like this:
+        <pre><code>my_variable = [1, 2, 3]</code></pre>
+      * You can access an item in the list by it's index:
+        <pre><code>my_variable[1]
+# This should return `2`, because lists are zero-indexed
+        </code></pre>
+    </script>
+  </section>
+
+  <section data-markdown>
+    <script type="text/template">
+      ##Lists
+
+      * Here is a little example of things you can do with lists:
+
+<pre><code>numbers = [1, 2, 3]
+more_numbers = [4, 5, 6]
+all_numbers = numbers + more_numbers
+print(all_numbers)
+all_numbers.reverse()
+print(all_numbers)
+all_numbers.append(7)
+print(all_numbers)
+all_numbers.sort()
+print(all_numbers)
+</code></pre>
+
+      * The output should look like this:
+<pre><code>[1, 2, 3, 4, 5, 6]
+[6, 5, 4, 3, 2, 1]
+[6, 5, 4, 3, 2, 1, 7]
+[1, 2, 3, 4, 5, 6, 7]
+</pre></code>
+    </script>
+  </section>
+
+
+  <section>
+      <h2>Exercise</h2>
+
+      <ul>
+        <li>Let's write a function that returns the weekday for a given weekday number</li>
+        <li>Make <strong>birthday.py</strong> look like this:</li>
+      </ul>
+
+<pre><code data-trim>
+import sys
+BIRTHDAY = "1982-09-08"
+
+def get_weekday(weekday_number):
+    weekdays = [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday",
+    ]
+    return weekdays[weekday_number - 1]
+
+def main():
+    age = None
+    try:
+        age = int(sys.argv[1])
+    except ValueError:
+        print("ERROR: Please enter an integer")
+        return
+
+    if age < 0:
+        print("ERROR: Negative ages are not allowed")
+        return
+    else:
+        message = "I am born {} and I am {} years old".format(BIRTHDAY, age)
+        print(message)
+
+main()
+print(get_weekday(1))
+</code></pre>
+    </script>
+  </section>
+</section>

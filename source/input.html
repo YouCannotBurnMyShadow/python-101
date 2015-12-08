@@ -1,0 +1,60 @@
+<section>
+  {% with active=active %}{% include "source/toc.html" %}{% endwith %}
+  <section data-markdown>
+    <script type="text/template">
+      ##Input
+
+      * Command Line Programs often take arguments as input
+      * This way you can tell the program what exactly you want to do
+      * For example the **cd** command takes a folder name as an argument:
+        <pre><code>cd ~/PyLadies</code></pre>
+    </script>
+  </section>
+
+  <section data-markdown>
+    <script type="text/template">
+      ##Imports
+
+      * Python has an extensive [Standard Library](https://docs.python.org/2/library/)
+      * We can use things from that library by importing them at the top of our files:
+        <pre><code>import datetime
+now = datetime.datetime.now()
+print(now)
+        </code></pre>
+      * The output should be the current date and time:
+        <pre><code>> 2015-12-08 02:19:15.529046</code></pre>
+    </script>
+  </section>
+
+  <section data-markdown>
+    <script type="text/template">
+      ##Imports
+
+      * Sometimes you don't want to import a whole **module**
+      * Instead, you just want to import one specific **member** of that module:
+        <pre><code>from datetime import datetime
+print(datetime.now())
+        </code></pre>
+      * The output should be the current date and time:
+        <pre><code>> 2015-12-08 02:19:15.529046</code></pre>
+    </script>
+  </section>
+
+  <section>
+      <h2>Exercise</h2>
+
+      <ul>
+        <li>With this new knowledge we can extend <strong>birthday.py</strong> a bit...</li>
+        <li>Make it look like this:</li>
+      </ul>
+
+<pre><code data-trim>
+import sys
+
+BIRTHDAY = "1982-09-08"
+age = sys.argv[1]
+message = "I am born {} and I am {} years old".format(BIRTHDAY, age)
+print(message)
+</code></pre>
+  </section>
+</section>

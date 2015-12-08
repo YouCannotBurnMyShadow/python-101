@@ -1,0 +1,118 @@
+<section>
+  {% with active=active %}{% include "source/toc.html" %}{% endwith %}
+  <section data-markdown>
+    <script type="text/template">
+      ##Datetimes
+
+      * The built-in **datetime** module has a **date** and a **datetime** class
+      * We can use these classes to do powerful things with date calulations
+      * In order to use the module, you need to import it
+      * In order to use the classes, you need to **instantiate** them
+
+<pre><code>import datetime
+my_date = datetime.datetime(2015, 12, 08)
+print(my_date)
+</code></pre>
+
+      * The output should be:
+        <pre><code>2015-12-08 00:00:00</pre></code>
+    </script>
+  </section>
+
+  <section data-markdown>
+    <script type="text/template">
+      ##Datetimes
+
+      * The **datetime.datetime** class has a powerful function called **strptime**
+      * It helps you to turn a string into a datetime object:
+      * You can learn more about the formatting options [here](https://docs.python.org/2/library/datetime.html#strftime-strptime-behavior)
+
+<pre><code>import datetime
+my_string = "2015-12-08"
+my_date = datetime.datetime.strptime(my_string, "%Y-%m-%d")
+print(my_date)
+</pre></code>
+
+      * The output should be:
+        <pre><code>2015-12-08 00:00:00</pre></code>
+    </script>
+  </section>
+
+  <section data-markdown>
+    <script type="text/template">
+      ##Datetimes
+
+      * There is much more you can do with datetimes
+      * For example, you can get the weekday number for any date:
+
+<pre><code>import datetime
+my_date = datetime.datetime(2015, 9, 8)
+print(my_date.isoweekday())
+</pre></code>
+
+      * The output should be:
+        <pre><code>2</pre></code>
+      * Because it's Tuesday, the second day of the week
+    </script>
+  </section>
+
+  <section>
+      <h2>Exercise</h2>
+
+      <ul>
+        <li>Let's write a function that returns your future birthdate for a given age</li>
+        <li>Make <strong>birthday.py</strong> look like this:</li>
+      </ul>
+
+<pre><code data-trim>
+import datetime
+import sys
+
+BIRTHDAY = "1982-09-08"
+
+
+def get_future_date(age):
+    date_object = datetime.datetime.strptime(BIRTHDAY, '%Y-%m-%d')
+    future_date = datetime.date(
+        date_object.year + age,
+        date_object.month,
+        date_object.day
+    )
+    return future_date
+
+def get_weekday(weekday_number):
+    weekdays = [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday",
+    ]
+    return weekdays[weekday_number - 1]
+
+def main():
+    age = None
+    try:
+        age = int(sys.argv[1])
+    except ValueError:
+        print("ERROR: Please enter an integer")
+        return
+
+    if age < 0:
+        print("ERROR: Negative ages are not allowed")
+        return
+    else:
+        message = "I am born {} and I am {} years old".format(BIRTHDAY, age)
+        print(message)
+        future_date = get_future_date(age)
+        message = "I will turn {} on {}".format(age, future_date)
+        print(message)
+
+main()
+print(get_weekday(1))
+
+</code></pre>
+  </section>
+</section>

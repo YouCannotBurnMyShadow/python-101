@@ -1,0 +1,22 @@
+{% extends "source/base.html" %}
+
+{% block slides %}
+{% include "source/title.html" %}
+{% include "source/whoami.html" %}
+{% include "source/thank_you.html" %}
+{% include "source/slack.html" %}
+{% include "source/slides.html" %}
+{% with active="intro" %}{% include "source/introduction.html" %}{% endwith %}
+{% with active="nutshell" %}{% include "source/nutshell.html" %}{% endwith %}
+{% with active="execute" %}{% include "source/execute.html" %}{% endwith %}
+{% with active="variables" %}{% include "source/variables.html" %}{% endwith %}
+{% with active="strings" %}{% include "source/strings.html" %}{% endwith %}
+{% with active="input" %}{% include "source/input.html" %}{% endwith %}
+{% with active="ifelse" %}{% include "source/ifelse.html" %}{% endwith %}
+{% with active="exceptions" %}{% include "source/exceptions.html" %}{% endwith %}
+{% with active="functions" %}{% include "source/functions.html" %}{% endwith %}
+{% with active="lists" %}{% include "source/lists.html" %}{% endwith %}
+{% with active="datetimes" %}{% include "source/datetimes.html" %}{% endwith %}
+{% with active="modules" %}{% include "source/modules.html" %}{% endwith %}
+{% with active="classes" %}{% include "source/classes.html" %}{% endwith %}
+{% endblock %}
