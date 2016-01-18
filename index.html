@@ -72,9 +72,9 @@
 </section>
 <section data-markdown>
   <script type="text/template">
-    ## Thank you, Red Hat Singapore &#9825; &#9825; &#9825;
+    ## Thank you, Red Hat & PayPal Singapore &#9825; &#9825; &#9825;
 
-    > Big thanks to Red Hat Singapore for kindly
+    > Big thanks to Red Hat & PayPal Singapore for kindly
     > hosting this event and for sponsoring pizza and softdrinks.
   </script>
 </section>
@@ -109,17 +109,17 @@
     
       <li><span class="toc-active" style="color: #17BAF9;">Introduction</span></li>
       <li><span >Python In A Nutshell</span></li>
-      <li><span >How to Execute a Python Script</span></li>
+      <li><span >Cloud9 IDE</span></li>
       <li><span >Variables</span></li>
       <li><span >Strings</span></li>
       <li><span >Input & Imports</span></li>
       <li><span >The If-Statement & Type-casting</span></li>
+      <li><span >Datetimes</span></li>
       <li><span >Exception Handling</span></li>
       <li><span >Functions</span></li>
-      <li><span >Lists</span></li>
-      <li><span >Datetimes</span></li>
-      <li><span >Modules</span></li>
-      <li><span >Classes</span></li>
+      <li><span >Lists & Loops</span></li>
+      <li><span >Dictionaries</span></li>
+      <li><span >What's Next?</span></li>
     
   </ul>
 </section>
@@ -141,17 +141,17 @@
     
       <li><span >Introduction</span></li>
       <li><span class="toc-active" style="color: #17BAF9;">Python In A Nutshell</span></li>
-      <li><span >How to Execute a Python Script</span></li>
+      <li><span >Cloud9 IDE</span></li>
       <li><span >Variables</span></li>
       <li><span >Strings</span></li>
       <li><span >Input & Imports</span></li>
       <li><span >The If-Statement & Type-casting</span></li>
+      <li><span >Datetimes</span></li>
       <li><span >Exception Handling</span></li>
       <li><span >Functions</span></li>
-      <li><span >Lists</span></li>
-      <li><span >Datetimes</span></li>
-      <li><span >Modules</span></li>
-      <li><span >Classes</span></li>
+      <li><span >Lists & Loops</span></li>
+      <li><span >Dictionaries</span></li>
+      <li><span >What's Next?</span></li>
     
   </ul>
 </section>
@@ -173,17 +173,7 @@
     <script type="text/template">
       ##Python In A Nutshell
 
-      * Python is an **object oriented** language
-      * This is pretty hard to explain...
-      * ...you will learn later what this means ;)
-    </script>
-  </section>
-
-  <section data-markdown>
-    <script type="text/template">
-      ##Python In A Nutshell
-
-      * Python is not a compiled language, but an **interpreted** language
+      * Python is not a **compiled language**, but an **interpreted** language
       * This means, in order to run a Python script,<br />
         you need to install the Python interpreter
       * Pro: You never need to compile your code.
@@ -196,24 +186,12 @@
     <script type="text/template">
       ##Python In A Nutshell
 
-      * Python is a **dynamically typed** language
-      * This means, you don't need to define a type when you create variables
-      * Pro: You can write prototypes and scripts very quickly
-      * Con: There is no compiler that can warn you about common errors
-      * However: You should write tests anyways. If you do, you will find most errors
-    </script>
-  </section>
-
-  <section data-markdown>
-    <script type="text/template">
-      ##Python In A Nutshell
-
       * Python is not the fastest language
-      * If you want to write a game, better use C
+        * If you want to write a game, better use C
       * Python is not the safest language
-      * If you want to fly a rocket to Mars, ask Elon Musk what he is using
+        * If you want to fly a rocket to Mars, ask Elon Musk what he is using
       * Python is a very readable, learnable and maintainable language
-      * If you want to build a business, use Python
+        * If you want to build a business, use Python
     </script>
   </section>
 </section>
@@ -225,32 +203,29 @@
     
       <li><span >Introduction</span></li>
       <li><span >Python In A Nutshell</span></li>
-      <li><span class="toc-active" style="color: #17BAF9;">How to Execute a Python Script</span></li>
+      <li><span class="toc-active" style="color: #17BAF9;">Cloud9 IDE</span></li>
       <li><span >Variables</span></li>
       <li><span >Strings</span></li>
       <li><span >Input & Imports</span></li>
       <li><span >The If-Statement & Type-casting</span></li>
+      <li><span >Datetimes</span></li>
       <li><span >Exception Handling</span></li>
       <li><span >Functions</span></li>
-      <li><span >Lists</span></li>
-      <li><span >Datetimes</span></li>
-      <li><span >Modules</span></li>
-      <li><span >Classes</span></li>
+      <li><span >Lists & Loops</span></li>
+      <li><span >Dictionaries</span></li>
+      <li><span >What's Next?</span></li>
     
   </ul>
 </section>
   <section data-markdown>
     <script type="text/template">
-      ##How to Execute a Python Script
+      ##Using Cloud9 IDE
 
-      * Make sure you have [Python 2.7 installed](https://www.python.org/downloads/)
-      * Find out more about [installation here](http://mbrochh.github.io/python-introduction/#/7/1)
-      * On OSX / Ubuntu, open your Terminal
-        * (search for it using Spotlight or COMMAND+SPACE)
-      * On Windows, open your Powershell
-        * (search for it in the Startmenu)
-      * Create a project folder
-        * Enter this into the terminal: <pre><code>mkdir ~/PyLadies</code></pre>
+      * Setting up Python on your local computer can be time consuming
+      * We have a [Python Introduction](http://mbrochh.github.io/python-introduction/#/) workshop to help with this
+      * For this workshop we will save some time and just use Cloud9 IDE
+      * Create an account at http://c9.io
+      * Create a new workspace "**pyladies-python101**"
     </script>
   </section>
 
@@ -258,27 +233,15 @@
     <script type="text/template">
       ##How to Execute a Python Script
 
-      * Now start your editor
-      * If you use atom, you can start it from your Terminal by typing
-        <pre><code>atom</code></pre>
-      * Use your editor to open the new *PyLadies* folder
-      * Rightclick on the folder and select *New File* and name it *test.py*
-      * Add this code to the file and save the file (CTRL+S):
-        <pre><code>print("Hello World!")</code></pre>
-      * Congratulations! You have just created a Python program!
+      * Open your workspace in Cloud9 IDE
+      * Rightclick at the workspace name in the left sidebar
+      * Chose "**New file**" and name it "**test.py**"
+      * Doubleclick the new file to open it
+      * Enter the following code:
+        <pre><code class="python">print("Hello World")</code></pre>
+      * Save the file
+      * Press the green "**Run**" button at the top
     </script>
-  </section>
-
-  <section>
-      ##Exercise
-
-      * In your Terminal, make sure that you are in the same folder<br />
-        where your Python files are:
-        <pre><code>cd ~/PyLadies</code></pre>
-      * Now execute your script:
-        <pre><code>python test.py</code></pre>
-      * You should see the *Hello World!* output in your Terminal
-      * Congratulations! You have executed your first own Python program!
   </section>
 </section>
 <section>
@@ -289,17 +252,17 @@
     
       <li><span >Introduction</span></li>
       <li><span >Python In A Nutshell</span></li>
-      <li><span >How to Execute a Python Script</span></li>
+      <li><span >Cloud9 IDE</span></li>
       <li><span class="toc-active" style="color: #17BAF9;">Variables</span></li>
       <li><span >Strings</span></li>
       <li><span >Input & Imports</span></li>
       <li><span >The If-Statement & Type-casting</span></li>
+      <li><span >Datetimes</span></li>
       <li><span >Exception Handling</span></li>
       <li><span >Functions</span></li>
-      <li><span >Lists</span></li>
-      <li><span >Datetimes</span></li>
-      <li><span >Modules</span></li>
-      <li><span >Classes</span></li>
+      <li><span >Lists & Loops</span></li>
+      <li><span >Dictionaries</span></li>
+      <li><span >What's Next?</span></li>
     
   </ul>
 </section>
@@ -310,10 +273,10 @@
       * Every program needs to store data in memory
       * We use **Variables** to remember values and use them later
       * The syntax for defining a variable is this:
-        <pre><code>variable_name = 1</code></pre>
-        <pre><code>message = "Hello World!"</code></pre>
-        <pre><code>is_simple = True</code></pre>
-        <pre><code>something = None</code></pre>
+        <pre><code class="python">variable_name = 1</code></pre>
+        <pre><code class="python">message = "Hello World!"</code></pre>
+        <pre><code class="python">is_simple = True</code></pre>
+        <pre><code class="python">something = None</code></pre>
     </script>
   </section>
 
@@ -324,14 +287,15 @@
         <li>Let's create a file called <strong>birthday.py</strong></li>
       </ul>
 
-<pre><code data-trim>
+<pre><code class="python" data-trim>
 BIRTHDAY = "1982-09-08"
 print(BIRTHDAY)
 </code></pre>
 
       <ul>
-        <li>Execute this script with <pre><code>python birthday.py</code></pre></li>
+        <li>Always run your script after each exercise!</li>
       </ul>
+
   </section>
 </section>
 <section>
@@ -342,17 +306,17 @@ print(BIRTHDAY)
     
       <li><span >Introduction</span></li>
       <li><span >Python In A Nutshell</span></li>
-      <li><span >How to Execute a Python Script</span></li>
+      <li><span >Cloud9 IDE</span></li>
       <li><span >Variables</span></li>
       <li><span class="toc-active" style="color: #17BAF9;">Strings</span></li>
       <li><span >Input & Imports</span></li>
       <li><span >The If-Statement & Type-casting</span></li>
+      <li><span >Datetimes</span></li>
       <li><span >Exception Handling</span></li>
       <li><span >Functions</span></li>
-      <li><span >Lists</span></li>
-      <li><span >Datetimes</span></li>
-      <li><span >Modules</span></li>
-      <li><span >Classes</span></li>
+      <li><span >Lists & Loops</span></li>
+      <li><span >Dictionaries</span></li>
+      <li><span >What's Next?</span></li>
     
   </ul>
 </section>
@@ -365,7 +329,7 @@ print(BIRTHDAY)
         * A char is a single character
         * Therefore, a whole word, is a long *string of characters*
       * The syntax for defining a string is this:
-        <pre><code>variable_name = "Your string"</code></pre>
+        <pre><code class="python">variable_name = "Your string"</code></pre>
     </script>
   </section>
 
@@ -374,16 +338,16 @@ print(BIRTHDAY)
       ##Strings
 
       * Like all things in Python, Strings are also Objects
-      * We will learn more about those later
-      * The cool thing about Objects is that they usually have useful methods
+      * For this workshop we will not worry about Objects.
+      * Just remember one thing: **Objects** usually have useful **methods**
       * Strings have a [ton of useful methods](https://docs.python.org/2/library/stdtypes.html#string-methods)
       * You can call string methods like this:
-        <pre><code>my_string = "Hello World!"
+        <pre><code class="python">my_string = "Hello World!"
 my_string = my_string.upper()
 print(my_string)
         </code></pre>
       * The output should look like this:
-        <pre><code>> HELLO WORLD!</code></pre>
+        <pre><code class="bash">> HELLO WORLD!</code></pre>
     </script>
   </section>
 
@@ -395,12 +359,12 @@ print(my_string)
       * It allows you to add placeholders into your strings
       * Then you can fill in variable values into those placeholders
       * It looks like this:
-        <pre><code>my_age = 33
+        <pre><code class="python">my_age = 33
 my_string = "I am {} years old".format(my_age)
 print(my_string)
         </code></pre>
       * The output should look like this:
-        <pre><code>> I am 33 years old</code></pre>
+        <pre><code class="bash">> I am 33 years old</code></pre>
     </script>
   </section>
 
@@ -411,7 +375,7 @@ print(my_string)
         <li>Change <strong>birthday.py</strong> to look like this:</li>
       </ul>
 
-<pre><code data-trim>
+<pre><code class="python" data-trim>
 BIRTHDAY = "1982-09-08"
 message = "I am born on {}".format(BIRTHDAY)
 print(message)
@@ -426,17 +390,17 @@ print(message)
     
       <li><span >Introduction</span></li>
       <li><span >Python In A Nutshell</span></li>
-      <li><span >How to Execute a Python Script</span></li>
+      <li><span >Cloud9 IDE</span></li>
       <li><span >Variables</span></li>
       <li><span >Strings</span></li>
       <li><span class="toc-active" style="color: #17BAF9;">Input & Imports</span></li>
       <li><span >The If-Statement & Type-casting</span></li>
+      <li><span >Datetimes</span></li>
       <li><span >Exception Handling</span></li>
       <li><span >Functions</span></li>
-      <li><span >Lists</span></li>
-      <li><span >Datetimes</span></li>
-      <li><span >Modules</span></li>
-      <li><span >Classes</span></li>
+      <li><span >Lists & Loops</span></li>
+      <li><span >Dictionaries</span></li>
+      <li><span >What's Next?</span></li>
     
   </ul>
 </section>
@@ -444,10 +408,12 @@ print(message)
     <script type="text/template">
       ##Input
 
-      * Command Line Programs often take arguments as input
-      * This way you can tell the program what exactly you want to do
-      * For example the **cd** command takes a folder name as an argument:
-        <pre><code>cd ~/PyLadies</code></pre>
+      * Command Line Programs often take **arguments** as input
+      * This way you pass in data into the program
+      * For example the **python** command takes a filename as a parameter:
+        <pre><code class="bash">python birthday.py</code></pre>
+      * We can even pass in more than one argument:
+        <pre><code class="bash">python birthday.py 1982-09-08</code></pre>
     </script>
   </section>
 
@@ -457,26 +423,12 @@ print(message)
 
       * Python has an extensive [Standard Library](https://docs.python.org/2/library/)
       * We can use things from that library by importing them at the top of our files:
-        <pre><code>import datetime
+        <pre><code class="python">import datetime
 now = datetime.datetime.now()
 print(now)
         </code></pre>
       * The output should be the current date and time:
-        <pre><code>> 2015-12-08 02:19:15.529046</code></pre>
-    </script>
-  </section>
-
-  <section data-markdown>
-    <script type="text/template">
-      ##Imports
-
-      * Sometimes you don't want to import a whole **module**
-      * Instead, you just want to import one specific **member** of that module:
-        <pre><code>from datetime import datetime
-print(datetime.now())
-        </code></pre>
-      * The output should be the current date and time:
-        <pre><code>> 2015-12-08 02:19:15.529046</code></pre>
+        <pre><code class="bash">> 2015-12-08 02:19:15.529046</code></pre>
     </script>
   </section>
 
@@ -485,18 +437,38 @@ print(datetime.now())
 
       <ul>
         <li>With this new knowledge we can extend <strong>birthday.py</strong> a bit...</li>
+        <li>Let's make it so that we pass in the date via the command line</li>
         <li>Make it look like this:</li>
       </ul>
 
-<pre><code data-trim>
+<pre><code class="python" data-trim>
 import sys
 
-BIRTHDAY = "1982-09-08"
-age = sys.argv[1]
-message = "I am born {} and I am {} years old".format(BIRTHDAY, age)
+BIRTHDAY = sys.argv[1]
+message = "I am born on {}".format(BIRTHDAY)
 print(message)
 </code></pre>
+
+      <ul>
+        <li>Try to press the "<strong>Run</strong>" button</li>
+      </ul>
+
   </section>
+
+  <section data-markdown>
+    <script type="text/template">
+      ##Exercise
+
+      * Whoops! Pressing the "**Run**" button generates an error:
+        * "*IndexError: list index out of range*"
+      * This is because our program now expects one command line argument
+      * From now on, we will execute our script from the Terminal
+      * Press "**ALT+T**" to open a new Terminal
+      * Enter <pre><code class="bash">python birthday.py 2015-01-01</code></pre>
+      * Leave that tab open, we will run our program from here from now on
+    </script>
+  </section>
+
 </section>
 <section>
   <section>
@@ -506,17 +478,17 @@ print(message)
     
       <li><span >Introduction</span></li>
       <li><span >Python In A Nutshell</span></li>
-      <li><span >How to Execute a Python Script</span></li>
+      <li><span >Cloud9 IDE</span></li>
       <li><span >Variables</span></li>
       <li><span >Strings</span></li>
       <li><span >Input & Imports</span></li>
       <li><span class="toc-active" style="color: #17BAF9;">The If-Statement & Type-casting</span></li>
+      <li><span >Datetimes</span></li>
       <li><span >Exception Handling</span></li>
       <li><span >Functions</span></li>
-      <li><span >Lists</span></li>
-      <li><span >Datetimes</span></li>
-      <li><span >Modules</span></li>
-      <li><span >Classes</span></li>
+      <li><span >Lists & Loops</span></li>
+      <li><span >Dictionaries</span></li>
+      <li><span >What's Next?</span></li>
     
   </ul>
 </section>
@@ -525,32 +497,17 @@ print(message)
       ##The If-Statement
 
       * You need to control the **program flow** in your programs
-      * That means, if some condition is True, then certain code should be executed
-      * If it is not True, either nothing should happen or some other code should be executed
+      * That means, if some condition is true, then certain code should be executed
+      * If it is not true, either nothing should happen or some other code should be executed
       * The If-Statement helps you to do this:
-        <pre><code>if 1 > 2:
+        <pre><code class="python">if 1 > 2:
     print("One is bigger than two")
     # This code is actually never reached
 else:
     print("One is not bigger than two")
         </code></pre>
       * The output should be:
-        <pre><code>> One is not bigger than two</code></pre>
-    </script>
-  </section>
-
-  <section data-markdown>
-    <script type="text/template">
-      ##Type-casting
-
-      * Sometimes a variable is a String but you actually want a Number
-      * You can try to **cast the string into a number**:
-<pre><code>my_string = "5"
-my_number = int(my_string)
-print(my_number)
-</code></pre>
-      * The output should be:
-        <pre><code>> 5</code></pre>
+        <pre><code class="bash">> One is not bigger than two</code></pre>
     </script>
   </section>
 
@@ -561,85 +518,24 @@ print(my_number)
         <li>Let's build some error handling into our <strong>birthday.py</strong></li>
       </ul>
 
-<pre><code data-trim>
+<pre><code class="python" data-trim>
 import sys
 
-BIRTHDAY = "1982-09-08"
-age = int(sys.argv[1])
-if age < 0:
-    print("ERROR: Negative ages are not allowed")
+if len(sys.argv) < 2:
+    print("ERROR: Please provide a date")
 else:
-    message = "I am born {} and I am {} years old".format(BIRTHDAY, age)
+    BIRTHDAY = sys.argv[1]
+    message = "I am born on {}".format(BIRTHDAY)
     print(message)
 </code></pre>
-  </section>
-</section>
-<section>
-  <section>
-  <h2>Table of Content</h2>
-
-  <ul>
-    
-      <li><span >Introduction</span></li>
-      <li><span >Python In A Nutshell</span></li>
-      <li><span >How to Execute a Python Script</span></li>
-      <li><span >Variables</span></li>
-      <li><span >Strings</span></li>
-      <li><span >Input & Imports</span></li>
-      <li><span >The If-Statement & Type-casting</span></li>
-      <li><span class="toc-active" style="color: #17BAF9;">Exception Handling</span></li>
-      <li><span >Functions</span></li>
-      <li><span >Lists</span></li>
-      <li><span >Datetimes</span></li>
-      <li><span >Modules</span></li>
-      <li><span >Classes</span></li>
-    
-  </ul>
-</section>
-  <section data-markdown>
-    <script type="text/template">
-      ##Exception Handling
-
-      * Sometimes you can't avoid program crashes
-      * Especially when your program accepts user input
-      * All users are evil! They always try to use your programs in ways you never expected :)
-      * You can use **try-except blocks** to **handle exceptions**:
-<pre><code>value1 = 1
-value2 = 0
-try:
-    result = value1 / value2
-except ZeroDivisionError:
-    print("ERROR: You can't divide by zero")
-</code></pre>
-      * The output should be:
-        <pre><code>> ERROR: You can't divide by zero</code></pre>
-    </script>
-  </section>
-
-  <section>
-      <h2>Exercise</h2>
 
       <ul>
-        <li>Let's make sure users only pass numbers into <strong>birthday.py></strong>:</li>
+        <li>By the way: "<strong>len</strong>" is a built-in function to return the length of a list</li>
+        <li>...and "<strong>sys.argv</strong>" is just a list of command line arguments
+        <li>The first argument is always the Python script filename</li>
+        <li>The second argument is supposed to be birthdate</li>
       </ul>
 
-<pre><code data-trim>
-import sys
-BIRTHDAY = "1982-09-08"
-
-age = None
-try:
-    age = int(sys.argv[1])
-except ValueError:
-    print("ERROR: Please enter an integer")
-
-if age is not None:
-    if age < 0:
-        print("ERROR: Negative ages are not allowed")
-    else:
-        message = "I am born {} and I am {} years old".format(BIRTHDAY, age)
-        print(message)
-</code></pre>
   </section>
 </section>
 <section>
@@ -650,206 +546,17 @@ if age is not None:
     
       <li><span >Introduction</span></li>
       <li><span >Python In A Nutshell</span></li>
-      <li><span >How to Execute a Python Script</span></li>
+      <li><span >Cloud9 IDE</span></li>
       <li><span >Variables</span></li>
       <li><span >Strings</span></li>
       <li><span >Input & Imports</span></li>
       <li><span >The If-Statement & Type-casting</span></li>
-      <li><span >Exception Handling</span></li>
-      <li><span class="toc-active" style="color: #17BAF9;">Functions</span></li>
-      <li><span >Lists</span></li>
-      <li><span >Datetimes</span></li>
-      <li><span >Modules</span></li>
-      <li><span >Classes</span></li>
-    
-  </ul>
-</section>
-  <section data-markdown>
-    <script type="text/template">
-      ##Functions
-
-      * You can group code into **functions**
-      * You can then call your function many times and therefore re-use your code
-      * Functions accept **arguments** and **keyword arguments**
-      * Functions have **return values**
-      * You can define a function like this:
-
-<pre><code>def function_name(arg1, arg2, kwarg1=None, kwarg2=None):
-  result = arg1 + arg2
-  return result
-</pre></code>
-
-      * You can call a function like this:
-
-<pre><code>result = function_name(1, 2, kwarg1="Hello"):
-print(result)
-</pre></code>
-
-    </script>
-  </section>
-
-  <section>
-      <h2>Exercise</h2>
-
-      <ul>
-        <li>Let's put our main program into a function in <strong>birthday.py</strong></li>
-      </ul>
-
-<pre><code data-trim>
-import sys
-
-BIRTHDAY = "1982-09-08"
-
-def main():
-    age = None
-    try:
-        age = int(sys.argv[1])
-    except ValueError:
-        print("ERROR: Please enter an integer")
-        return
-
-    if age < 0:
-        print("ERROR: Negative ages are not allowed")
-        return
-    else:
-        message = "I am born {} and I am {} years old".format(BIRTHDAY, age)
-        print(message)
-
-main()
-</code></pre>
-  </section>
-</section>
-<section>
-  <section>
-  <h2>Table of Content</h2>
-
-  <ul>
-    
-      <li><span >Introduction</span></li>
-      <li><span >Python In A Nutshell</span></li>
-      <li><span >How to Execute a Python Script</span></li>
-      <li><span >Variables</span></li>
-      <li><span >Strings</span></li>
-      <li><span >Input & Imports</span></li>
-      <li><span >The If-Statement & Type-casting</span></li>
-      <li><span >Exception Handling</span></li>
-      <li><span >Functions</span></li>
-      <li><span class="toc-active" style="color: #17BAF9;">Lists</span></li>
-      <li><span >Datetimes</span></li>
-      <li><span >Modules</span></li>
-      <li><span >Classes</span></li>
-    
-  </ul>
-</section>
-  <section data-markdown>
-    <script type="text/template">
-      ##Lists
-
-      * You can store many values into lists
-      * You can add or remove items from lists
-      * You can define an empy list like this
-        <pre><code>my_variable = []</code></pre>
-      * You can define a list with initial elements like this:
-        <pre><code>my_variable = [1, 2, 3]</code></pre>
-      * You can access an item in the list by it's index:
-        <pre><code>my_variable[1]
-# This should return `2`, because lists are zero-indexed
-        </code></pre>
-    </script>
-  </section>
-
-  <section data-markdown>
-    <script type="text/template">
-      ##Lists
-
-      * Here is a little example of things you can do with lists:
-
-<pre><code>numbers = [1, 2, 3]
-more_numbers = [4, 5, 6]
-all_numbers = numbers + more_numbers
-print(all_numbers)
-all_numbers.reverse()
-print(all_numbers)
-all_numbers.append(7)
-print(all_numbers)
-all_numbers.sort()
-print(all_numbers)
-</code></pre>
-
-      * The output should look like this:
-<pre><code>[1, 2, 3, 4, 5, 6]
-[6, 5, 4, 3, 2, 1]
-[6, 5, 4, 3, 2, 1, 7]
-[1, 2, 3, 4, 5, 6, 7]
-</pre></code>
-    </script>
-  </section>
-
-
-  <section>
-      <h2>Exercise</h2>
-
-      <ul>
-        <li>Let's write a function that returns the weekday for a given weekday number</li>
-        <li>Make <strong>birthday.py</strong> look like this:</li>
-      </ul>
-
-<pre><code data-trim>
-import sys
-BIRTHDAY = "1982-09-08"
-
-def get_weekday(weekday_number):
-    weekdays = [
-        "Monday",
-        "Tuesday",
-        "Wednesday",
-        "Thursday",
-        "Friday",
-        "Saturday",
-        "Sunday",
-    ]
-    return weekdays[weekday_number - 1]
-
-def main():
-    age = None
-    try:
-        age = int(sys.argv[1])
-    except ValueError:
-        print("ERROR: Please enter an integer")
-        return
-
-    if age < 0:
-        print("ERROR: Negative ages are not allowed")
-        return
-    else:
-        message = "I am born {} and I am {} years old".format(BIRTHDAY, age)
-        print(message)
-
-main()
-print(get_weekday(1))
-</code></pre>
-    </script>
-  </section>
-</section>
-<section>
-  <section>
-  <h2>Table of Content</h2>
-
-  <ul>
-    
-      <li><span >Introduction</span></li>
-      <li><span >Python In A Nutshell</span></li>
-      <li><span >How to Execute a Python Script</span></li>
-      <li><span >Variables</span></li>
-      <li><span >Strings</span></li>
-      <li><span >Input & Imports</span></li>
-      <li><span >The If-Statement & Type-casting</span></li>
-      <li><span >Exception Handling</span></li>
-      <li><span >Functions</span></li>
-      <li><span >Lists</span></li>
       <li><span class="toc-active" style="color: #17BAF9;">Datetimes</span></li>
-      <li><span >Modules</span></li>
-      <li><span >Classes</span></li>
+      <li><span >Exception Handling</span></li>
+      <li><span >Functions</span></li>
+      <li><span >Lists & Loops</span></li>
+      <li><span >Dictionaries</span></li>
+      <li><span >What's Next?</span></li>
     
   </ul>
 </section>
@@ -857,12 +564,12 @@ print(get_weekday(1))
     <script type="text/template">
       ##Datetimes
 
-      * The built-in **datetime** module has a **date** and a **datetime** class
+      * The built-in **datetime** module has three important classes: **date**, **datetime** and **timedelta**
       * We can use these classes to do powerful things with date calulations
       * In order to use the module, you need to import it
-      * In order to use the classes, you need to **instantiate** them
+      * This is how you create a datetime object:
 
-<pre><code>import datetime
+<pre><code class="python">import datetime
 my_date = datetime.datetime(2015, 12, 08)
 print(my_date)
 </code></pre>
@@ -913,59 +620,19 @@ print(my_date.isoweekday())
       <h2>Exercise</h2>
 
       <ul>
-        <li>Let's write a function that returns your future birthdate for a given age</li>
-        <li>Make <strong>birthday.py</strong> look like this:</li>
+        <li>Let's convert the birthdate input string into a datetime object</li>
       </ul>
 
-<pre><code data-trim>
-import datetime
+<pre><code class="python" data-trim>
 import sys
+from datetime import datetime
 
-BIRTHDAY = "1982-09-08"
-
-
-def get_future_date(age):
-    date_object = datetime.datetime.strptime(BIRTHDAY, '%Y-%m-%d')
-    future_date = datetime.date(
-        date_object.year + age,
-        date_object.month,
-        date_object.day
-    )
-    return future_date
-
-def get_weekday(weekday_number):
-    weekdays = [
-        "Monday",
-        "Tuesday",
-        "Wednesday",
-        "Thursday",
-        "Friday",
-        "Saturday",
-        "Sunday",
-    ]
-    return weekdays[weekday_number - 1]
-
-def main():
-    age = None
-    try:
-        age = int(sys.argv[1])
-    except ValueError:
-        print("ERROR: Please enter an integer")
-        return
-
-    if age < 0:
-        print("ERROR: Negative ages are not allowed")
-        return
-    else:
-        message = "I am born {} and I am {} years old".format(BIRTHDAY, age)
-        print(message)
-        future_date = get_future_date(age)
-        message = "I will turn {} on {}".format(age, future_date)
-        print(message)
-
-main()
-print(get_weekday(1))
-
+if len(sys.argv) < 2:
+    print("ERROR: Please provide a date")
+else:
+    BIRTHDAY = datetime.strptime(sys.argv[1], "%Y-%m-%d")
+    message = "I am born on {}".format(BIRTHDAY.date())
+    print(message)
 </code></pre>
   </section>
 </section>
@@ -977,85 +644,36 @@ print(get_weekday(1))
     
       <li><span >Introduction</span></li>
       <li><span >Python In A Nutshell</span></li>
-      <li><span >How to Execute a Python Script</span></li>
+      <li><span >Cloud9 IDE</span></li>
       <li><span >Variables</span></li>
       <li><span >Strings</span></li>
       <li><span >Input & Imports</span></li>
       <li><span >The If-Statement & Type-casting</span></li>
-      <li><span >Exception Handling</span></li>
-      <li><span >Functions</span></li>
-      <li><span >Lists</span></li>
       <li><span >Datetimes</span></li>
-      <li><span class="toc-active" style="color: #17BAF9;">Modules</span></li>
-      <li><span >Classes</span></li>
+      <li><span class="toc-active" style="color: #17BAF9;">Exception Handling</span></li>
+      <li><span >Functions</span></li>
+      <li><span >Lists & Loops</span></li>
+      <li><span >Dictionaries</span></li>
+      <li><span >What's Next?</span></li>
     
   </ul>
 </section>
   <section data-markdown>
     <script type="text/template">
-      ##Modules
+      ##Exception Handling
 
-      * Every ***.py** file is a Python module
-      * To keep your code easy to read and easy to maintain, you should split it into small modules
-      * When two ***.py** files are in the same folder, they can import each other
-      * When you **import** a module, Python will try to execute all the code in that module
-      * This means, if you would import our **birthday.py** module, the import would crash
-        * Because the birthday program requires a command line argument
-    </script>
-  </section>
-
-  <section>
-      <h2>Exercise</h2>
-
-      <ul>
-        <li>We already have a few useful functions (<em>get_weekday</em> and <em>get_future_date</em>)</li>
-        <li>It would be grat if we could import them in our Python programs without crashing</li>
-        <li>Create a new file <strong>birth_date.py</strong> and move the functions into that file:</li>
-      </ul>
-
-<pre><code data-trim>
-import datetime
-from settings import BIRTHDAY
-
-def get_future_date(age):
-    date_object = datetime.datetime.strptime(BIRTHDAY, '%Y-%m-%d')
-    future_date = datetime.date(
-        date_object.year + age,
-        date_object.month,
-        date_object.day
-    )
-    return future_date
-
-def get_weekday(weekday_number):
-    weekdays = [
-        "Monday",
-        "Tuesday",
-        "Wednesday",
-        "Thursday",
-        "Friday",
-        "Saturday",
-        "Sunday",
-    ]
-    return weekdays[weekday_number - 1]
+      * Sometimes you can't avoid program crashes
+      * Especially when your program accepts user input
+      * You can use **try-except blocks** to **handle exceptions**:
+<pre><code>value1 = 1
+value2 = 0
+try:
+    result = value1 / value2
+except ZeroDivisionError:
+    print("ERROR: You can't divide by zero")
 </code></pre>
-
-      <ul>
-        <li>We didn't really add any new code, we just moved old code into a new file</li>
-      </ul>
-  </section>
-
-  <section>
-      <h2>Exercise</h2>
-
-      <ul>
-        <li>Create another new file <strong>settings.py</strong>:</li>
-      </ul>
-
-<pre><code>BIRTHDAY = "1982-09-08"</code></pre>
-
-      <ul>
-        <li>This is just to demonstrate how your programs could have settings files</li>
-      </ul>
+      * The output should be:
+        <pre><code>> ERROR: You can't divide by zero</code></pre>
     </script>
   </section>
 
@@ -1063,35 +681,29 @@ def get_weekday(weekday_number):
       <h2>Exercise</h2>
 
       <ul>
-        <li>Finally, remove the code that we have just moved from <strong>birthday.py</strong>:</li>
+        <li>Let's make sure that the date is formatted correctly:</li>
+      </ul>
 
-<pre><code data-trim>
+<pre><code class="python" data-trim>
 import sys
-from birth_date import get_future_date, get_weekday
+from datetime import datetime
 
-def main():
-    age = None
+if len(sys.argv) < 2:
+    print("ERROR: Please provide a date")
+else:
     try:
-        age = int(sys.argv[1])
+        BIRTHDAY = datetime.strptime(sys.argv[1], "%Y-%m-%d")
     except ValueError:
-        print("ERROR: Please enter an integer")
-        return
-
-    if age < 0:
-        print("ERROR: Negative ages are not allowed")
-        return
-    else:
-        future_date = get_future_date(age)
-        weekday = get_weekday(future_date.isoweekday())
-        message = "I will turn {} on {}, {}".format(age, weekday, future_date)
-        print(message)
-
-main()
+        print("ERROR: Please enter a correct date")
+        sys.exit()
+    message = "I am born on {}".format(BIRTHDAY.date())
+    print(message)
 </code></pre>
 
       <ul>
-        <li>Note that we are now importing our moved-away functions</li>
+        <li>By the way: "<strong>sys.exit()</strong>" stops the program</li>
       </ul>
+
   </section>
 </section>
 <section>
@@ -1102,46 +714,41 @@ main()
     
       <li><span >Introduction</span></li>
       <li><span >Python In A Nutshell</span></li>
-      <li><span >How to Execute a Python Script</span></li>
+      <li><span >Cloud9 IDE</span></li>
       <li><span >Variables</span></li>
       <li><span >Strings</span></li>
       <li><span >Input & Imports</span></li>
       <li><span >The If-Statement & Type-casting</span></li>
-      <li><span >Exception Handling</span></li>
-      <li><span >Functions</span></li>
-      <li><span >Lists</span></li>
       <li><span >Datetimes</span></li>
-      <li><span >Modules</span></li>
-      <li><span class="toc-active" style="color: #17BAF9;">Classes</span></li>
+      <li><span >Exception Handling</span></li>
+      <li><span class="toc-active" style="color: #17BAF9;">Functions</span></li>
+      <li><span >Lists & Loops</span></li>
+      <li><span >Dictionaries</span></li>
+      <li><span >What's Next?</span></li>
     
   </ul>
 </section>
   <section data-markdown>
     <script type="text/template">
-      ##Classes
+      ##Functions
 
-      * Python is an **Object Oriented Programming** language
-      * That means, all data types in Python are classes and objects behind the scenes
-      * A **Class** basically describes a certain thing in the world
-      * A class can have **Class Attributes**. Those are just variables
-      * A class can have **Class Methods**. Those are just functions
-      * In order to use a class, you have to create an **Instance** of the class
-      * These instances are called **Objects**
-      * Don't panic! None of the above will make any sense to you until you try and use it ;)
-    </script>
-  </section>
+      * You can group code into **functions**
+      * You can then call your function many times and therefore re-use your code
+      * Functions accept **arguments** and **keyword arguments**
+      * Functions have **return values**
+      * You can define a function like this:
 
-  <section data-markdown>
-    <script type="text/template">
-      ##Classes
+<pre><code>def function_name(arg1, arg2, kwarg1=None, kwarg2=None):
+  result = arg1 + arg2
+  return result
+</pre></code>
 
-      * Another way to think about classes is this:
-      * They encapsulate all the code that solves a specific problem
-      * They keep track of their own state (via their attributes)
-      * They offer you functions to manipulate their own state
-      * You could say that modules already do the same
-        * That is correct, but there is more to classes
-        * Classes support **Inheritance**, which unfortunately is too complex for this workshop
+      * You can call a function like this:
+
+<pre><code>result = function_name(1, 2, kwarg1="Hello"):
+print(result)
+</pre></code>
+
     </script>
   </section>
 
@@ -1149,45 +756,306 @@ main()
       <h2>Exercise</h2>
 
       <ul>
-        <li>Let's try to create a <strong>BirthDate</strong> class for our program.</li>
-        <li>Change the code in <strong>birth_date.py</strong> like this:</li>
+        <li>Let's create a function that adds some years to a given date</li>
       </ul>
 
-<pre><code data-trim>
-from datetime import date, datetime
+<pre><code class="python" data-trim>
+import sys
+from datetime import datetime, date
 
-class BirthdayDate(object):
-    date_of_birth = None
+def get_future_date(base_date, years):
+    future_date = date(
+        base_date.year + years,
+        base_date.month,
+        base_date.day
+    )
+    return future_date
 
-    def __init__(self, date_string):
-        self.date_of_birth = date_string
-
-    def get_future_date(self, age):
-        date_object = datetime.strptime(self.date_of_birth, '%Y-%m-%d')
-        future_date = date(
-            date_object.year + int(age),
-            date_object.month,
-            date_object.day
-        )
-        return future_date
-
-    def get_weekday_string(self, weekday_number):
-        weekdays = [
-            "Monday",
-            "Tuesday",
-            "Wednesday",
-            "Thursday",
-            "Friday",
-            "Saturday",
-            "Sunday",
-        ]
-        return weekdays[weekday_number - 1]
-
-    def get_birthday_weekday(self, age):
-        future_date = self.get_future_date(age)
-        weekday_number = future_date.isoweekday()
-        return self.get_weekday_string(weekday_number)
+if len(sys.argv) < 3:
+    print("ERROR: Please provide a date and an age")
+else:
+    try:
+        birthday = datetime.strptime(sys.argv[1], "%Y-%m-%d")
+    except ValueError:
+        print("ERROR: Please enter a correct date")
+        sys.exit()
+    years = int(sys.argv[2])
+    future_date = get_future_date(birthday, years)
+    message = "I will turn {} on {}".format(years, future_date)
+    print(message)
 </code></pre>
+  </section>
+</section>
+<section>
+  <section>
+  <h2>Table of Content</h2>
+
+  <ul>
+    
+      <li><span >Introduction</span></li>
+      <li><span >Python In A Nutshell</span></li>
+      <li><span >Cloud9 IDE</span></li>
+      <li><span >Variables</span></li>
+      <li><span >Strings</span></li>
+      <li><span >Input & Imports</span></li>
+      <li><span >The If-Statement & Type-casting</span></li>
+      <li><span >Datetimes</span></li>
+      <li><span >Exception Handling</span></li>
+      <li><span >Functions</span></li>
+      <li><span class="toc-active" style="color: #17BAF9;">Lists & Loops</span></li>
+      <li><span >Dictionaries</span></li>
+      <li><span >What's Next?</span></li>
+    
+  </ul>
+</section>
+  <section data-markdown>
+    <script type="text/template">
+      ##Lists
+
+      * You can define an empy list like this
+        <pre><code class="python">my_variable = []</code></pre>
+      * You can store many values into lists
+        <pre><code class="python">my_variable = [1, 2, 3]</code></pre>
+      * You can add or remove items from lists
+        <pre><code class="python">my_variable.append(4)
+my_variable.remove(4)</code></pre>
+      * You can access an item in the list by it's index:
+        <pre><code class="python">my_variable[1]
+# This should return `2`, because lists are zero-indexed
+        </code></pre>
+      * Find out more about lists [here](https://docs.python.org/2/tutorial/datastructures.html#more-on-lists)
+    </script>
+  </section>
+
+  <section data-markdown>
+    <script type="text/template">
+      ##Lists
+
+      * Here is a little example of things you can do with lists:
+
+<pre><code class="python">numbers = [1, 2, 3]
+more_numbers = [4, 5, 6]
+all_numbers = numbers + more_numbers
+print(all_numbers)
+all_numbers.reverse()
+print(all_numbers)
+all_numbers.append(7)
+print(all_numbers)
+all_numbers.sort()
+print(all_numbers)
+</code></pre>
+
+      * The output should look like this:
+<pre><code>[1, 2, 3, 4, 5, 6]
+[6, 5, 4, 3, 2, 1]
+[6, 5, 4, 3, 2, 1, 7]
+[1, 2, 3, 4, 5, 6, 7]
+</pre></code>
+    </script>
+  </section>
+
+  <section data-markdown>
+    <script type="text/template">
+      ##Tip: The Range Function
+
+      * "**range()**" is a built-in function
+      * It generates a list of numbers for you:
+        <pre><code class="python">my_list = range(100)
+my_other_list = range(1, 100, 1)
+print(my_list)
+print(my_other_list)
+        </code></pre>
+    </script>
+  </section>
+
+  <section>
+      <h2>Loops</h2>
+
+      <ul>
+        <li>You often need to repeat the same code in a loop</li>
+        <li>Loops look like this:</li>
+      </ul>
+
+<pre><code class="python" data-trim>
+var my_list = [1, 2, 3, 4]
+
+for my_number in my_list:
+    if my_number == 1:
+        continue
+    print (my_number)
+</code></pre>
+
+      <ul>
+        <li>You can use "<strong>continue</strong>" to skip this iteration of the loop</li>
+      </ul>
+
+  </section>
+
+  <section>
+      <h2>Exercise</h2>
+
+      <ul>
+        <li>Let's extend the output of our program so that it shows all future birthdays up to the provided age</li>
+      </ul>
+
+<pre><code class="python" data-trim>
+import sys
+from datetime import datetime, date
+
+def get_future_date(base_date, years):
+    future_date = date(
+        base_date.year + years,
+        base_date.month,
+        base_date.day
+    )
+    return future_date
+
+if len(sys.argv) < 3:
+    print("ERROR: Please provide a date and an age")
+else:
+    try:
+        birthday = datetime.strptime(sys.argv[1], "%Y-%m-%d")
+    except ValueError:
+        print("ERROR: Please enter a correct date")
+        sys.exit()
+    years = int(sys.argv[2])
+    years_list = range(1, years + 1, 1)
+    for year in years_list:
+        future_date = get_future_date(birthday, year)
+        message = "I will turn {} on {}".format(year, future_date)
+        print(message)
+</code></pre>
+    </script>
+  </section>
+</section>
+<section>
+  <section>
+  <h2>Table of Content</h2>
+
+  <ul>
+    
+      <li><span >Introduction</span></li>
+      <li><span >Python In A Nutshell</span></li>
+      <li><span >Cloud9 IDE</span></li>
+      <li><span >Variables</span></li>
+      <li><span >Strings</span></li>
+      <li><span >Input & Imports</span></li>
+      <li><span >The If-Statement & Type-casting</span></li>
+      <li><span >Datetimes</span></li>
+      <li><span >Exception Handling</span></li>
+      <li><span >Functions</span></li>
+      <li><span >Lists & Loops</span></li>
+      <li><span class="toc-active" style="color: #17BAF9;">Dictionaries</span></li>
+      <li><span >What's Next?</span></li>
+    
+  </ul>
+</section>
+  <section>
+      <h2>Dictionaries</h2>
+
+      <ul>
+        <li>Dictionaries are so called "<strong>key-value-stores</strong>"</li>
+        <li>You can define an empty dictionary like this:
+            <pre><code class="python">my_dict = {}</code></pre></li>
+        <li>You can also define it with initial values:</li>
+      </ul>
+
+<pre><code class="python">my_dict = {
+    "Martin": 33,
+    "Eva": 24,
+}
+</code></pre>
+
+      <ul>
+        <li>You can access an item by it's key:
+            <pre><code class="python">martins_age = my_dict["Martin"]</code></pre></li>
+      </ul>
+
+    </script>
+  </section>
+
+  <section>
+      <h2>Exercise</h2>
+
+      <ul>
+        <li>Let's add the final piece to our program</li>
+        <li>We will write a function that returns the weekday name for a given weekday number</li>
+      </ul>
+
+<pre><code class="python" data-trim>
+import sys
+from datetime import datetime, date
+
+def get_weekday_name(weekday_number):
+    weekdays = {
+        1: "Monday",
+        2: "Tuesday",
+        3: "Wednesday",
+        4: "Thursday",
+        5: "Friday",
+        6: "Saturday",
+        7: "Sunday",
+    }
+    return weekdays[weekday_number]
+
+def get_future_date(base_date, years):
+    future_date = date(
+        base_date.year + years,
+        base_date.month,
+        base_date.day
+    )
+    return future_date
+
+if len(sys.argv) < 3:
+    print("ERROR: Please provide a date and an age")
+else:
+    try:
+        birthday = datetime.strptime(sys.argv[1], "%Y-%m-%d")
+    except ValueError:
+        print("ERROR: Please enter a correct date")
+        sys.exit()
+    years = int(sys.argv[2])
+    years_list = range(1, years + 1, 1)
+    for year in years_list:
+        future_date = get_future_date(birthday, year)
+        weekday = get_weekday_name(future_date.isoweekday())
+        message = "I will turn {} on {}, {}".format(year, weekday, future_date)
+        print(message)
+</code></pre>
+    </script>
+  </section>
+</section>
+<section>
+  <section>
+  <h2>Table of Content</h2>
+
+  <ul>
+    
+      <li><span >Introduction</span></li>
+      <li><span >Python In A Nutshell</span></li>
+      <li><span >Cloud9 IDE</span></li>
+      <li><span >Variables</span></li>
+      <li><span >Strings</span></li>
+      <li><span >Input & Imports</span></li>
+      <li><span >The If-Statement & Type-casting</span></li>
+      <li><span >Datetimes</span></li>
+      <li><span >Exception Handling</span></li>
+      <li><span >Functions</span></li>
+      <li><span >Lists & Loops</span></li>
+      <li><span >Dictionaries</span></li>
+      <li><span class="toc-active" style="color: #17BAF9;">What's Next?</span></li>
+    
+  </ul>
+</section>
+  <section data-markdown>
+    <script type="text/template">
+      ##What's Next?
+
+      * Work your way through [learnpythonthehardway.org](http://learnpythonthehardway.org/book/)
+      * Come visit our Python 102 workshop :)
+      * Like our Facebook group: [PyLadies SG](https://www.facebook.com/groups/pyladiessg/)
+      * Join our [Slack channel](http://pyladies-sg-slackin.herokuapp.com)
+    </script>
   </section>
 </section>
 
