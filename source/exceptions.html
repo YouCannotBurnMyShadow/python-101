@@ -6,7 +6,6 @@
 
       * Sometimes you can't avoid program crashes
       * Especially when your program accepts user input
-      * All users are evil! They always try to use your programs in ways you never expected :)
       * You can use **try-except blocks** to **handle exceptions**:
 <pre><code>value1 = 1
 value2 = 0
@@ -24,25 +23,28 @@ except ZeroDivisionError:
       <h2>Exercise</h2>
 
       <ul>
-        <li>Let's make sure users only pass numbers into <strong>birthday.py></strong>:</li>
+        <li>Let's make sure that the date is formatted correctly:</li>
       </ul>
 
-<pre><code data-trim>
+<pre><code class="python" data-trim>
 import sys
-BIRTHDAY = "1982-09-08"
+from datetime import datetime
 
-age = None
-try:
-    age = int(sys.argv[1])
-except ValueError:
-    print("ERROR: Please enter an integer")
-
-if age is not None:
-    if age < 0:
-        print("ERROR: Negative ages are not allowed")
-    else:
-        message = "I am born {} and I am {} years old".format(BIRTHDAY, age)
-        print(message)
+if len(sys.argv) < 2:
+    print("ERROR: Please provide a date")
+else:
+    try:
+        BIRTHDAY = datetime.strptime(sys.argv[1], "%Y-%m-%d")
+    except ValueError:
+        print("ERROR: Please enter a correct date")
+        sys.exit()
+    message = "I am born on {}".format(BIRTHDAY.date())
+    print(message)
 </code></pre>
+
+      <ul>
+        <li>By the way: "<strong>sys.exit()</strong>" stops the program</li>
+      </ul>
+
   </section>
 </section>

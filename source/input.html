@@ -4,10 +4,12 @@
     <script type="text/template">
       ##Input
 
-      * Command Line Programs often take arguments as input
-      * This way you can tell the program what exactly you want to do
-      * For example the **cd** command takes a folder name as an argument:
-        <pre><code>cd ~/PyLadies</code></pre>
+      * Command Line Programs often take **arguments** as input
+      * This way you pass in data into the program
+      * For example the **python** command takes a filename as a parameter:
+        <pre><code class="bash">python birthday.py</code></pre>
+      * We can even pass in more than one argument:
+        <pre><code class="bash">python birthday.py 1982-09-08</code></pre>
     </script>
   </section>
 
@@ -17,26 +19,12 @@
 
       * Python has an extensive [Standard Library](https://docs.python.org/2/library/)
       * We can use things from that library by importing them at the top of our files:
-        <pre><code>import datetime
+        <pre><code class="python">import datetime
 now = datetime.datetime.now()
 print(now)
         </code></pre>
       * The output should be the current date and time:
-        <pre><code>> 2015-12-08 02:19:15.529046</code></pre>
-    </script>
-  </section>
-
-  <section data-markdown>
-    <script type="text/template">
-      ##Imports
-
-      * Sometimes you don't want to import a whole **module**
-      * Instead, you just want to import one specific **member** of that module:
-        <pre><code>from datetime import datetime
-print(datetime.now())
-        </code></pre>
-      * The output should be the current date and time:
-        <pre><code>> 2015-12-08 02:19:15.529046</code></pre>
+        <pre><code class="bash">> 2015-12-08 02:19:15.529046</code></pre>
     </script>
   </section>
 
@@ -45,16 +33,36 @@ print(datetime.now())
 
       <ul>
         <li>With this new knowledge we can extend <strong>birthday.py</strong> a bit...</li>
+        <li>Let's make it so that we pass in the date via the command line</li>
         <li>Make it look like this:</li>
       </ul>
 
-<pre><code data-trim>
+<pre><code class="python" data-trim>
 import sys
 
-BIRTHDAY = "1982-09-08"
-age = sys.argv[1]
-message = "I am born {} and I am {} years old".format(BIRTHDAY, age)
+BIRTHDAY = sys.argv[1]
+message = "I am born on {}".format(BIRTHDAY)
 print(message)
 </code></pre>
+
+      <ul>
+        <li>Try to press the "<strong>Run</strong>" button</li>
+      </ul>
+
   </section>
+
+  <section data-markdown>
+    <script type="text/template">
+      ##Exercise
+
+      * Whoops! Pressing the "**Run**" button generates an error:
+        * "*IndexError: list index out of range*"
+      * This is because our program now expects one command line argument
+      * From now on, we will execute our script from the Terminal
+      * Press "**ALT+T**" to open a new Terminal
+      * Enter <pre><code class="bash">python birthday.py 2015-01-01</code></pre>
+      * Leave that tab open, we will run our program from here from now on
+    </script>
+  </section>
+
 </section>

@@ -28,30 +28,33 @@ print(result)
       <h2>Exercise</h2>
 
       <ul>
-        <li>Let's put our main program into a function in <strong>birthday.py</strong></li>
+        <li>Let's create a function that adds some years to a given date</li>
       </ul>
 
-<pre><code data-trim>
+<pre><code class="python" data-trim>
 import sys
+from datetime import datetime, date
 
-BIRTHDAY = "1982-09-08"
+def get_future_date(base_date, years):
+    future_date = date(
+        base_date.year + years,
+        base_date.month,
+        base_date.day
+    )
+    return future_date
 
-def main():
-    age = None
+if len(sys.argv) < 3:
+    print("ERROR: Please provide a date and an age")
+else:
     try:
-        age = int(sys.argv[1])
+        birthday = datetime.strptime(sys.argv[1], "%Y-%m-%d")
     except ValueError:
-        print("ERROR: Please enter an integer")
-        return
-
-    if age < 0:
-        print("ERROR: Negative ages are not allowed")
-        return
-    else:
-        message = "I am born {} and I am {} years old".format(BIRTHDAY, age)
-        print(message)
-
-main()
+        print("ERROR: Please enter a correct date")
+        sys.exit()
+    years = int(sys.argv[2])
+    future_date = get_future_date(birthday, years)
+    message = "I will turn {} on {}".format(years, future_date)
+    print(message)
 </code></pre>
   </section>
 </section>

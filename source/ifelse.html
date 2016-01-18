@@ -5,32 +5,17 @@
       ##The If-Statement
 
       * You need to control the **program flow** in your programs
-      * That means, if some condition is True, then certain code should be executed
-      * If it is not True, either nothing should happen or some other code should be executed
+      * That means, if some condition is true, then certain code should be executed
+      * If it is not true, either nothing should happen or some other code should be executed
       * The If-Statement helps you to do this:
-        <pre><code>if 1 > 2:
+        <pre><code class="python">if 1 > 2:
     print("One is bigger than two")
     # This code is actually never reached
 else:
     print("One is not bigger than two")
         </code></pre>
       * The output should be:
-        <pre><code>> One is not bigger than two</code></pre>
-    </script>
-  </section>
-
-  <section data-markdown>
-    <script type="text/template">
-      ##Type-casting
-
-      * Sometimes a variable is a String but you actually want a Number
-      * You can try to **cast the string into a number**:
-<pre><code>my_string = "5"
-my_number = int(my_string)
-print(my_number)
-</code></pre>
-      * The output should be:
-        <pre><code>> 5</code></pre>
+        <pre><code class="bash">> One is not bigger than two</code></pre>
     </script>
   </section>
 
@@ -41,16 +26,23 @@ print(my_number)
         <li>Let's build some error handling into our <strong>birthday.py</strong></li>
       </ul>
 
-<pre><code data-trim>
+<pre><code class="python" data-trim>
 import sys
 
-BIRTHDAY = "1982-09-08"
-age = int(sys.argv[1])
-if age < 0:
-    print("ERROR: Negative ages are not allowed")
+if len(sys.argv) < 2:
+    print("ERROR: Please provide a date")
 else:
-    message = "I am born {} and I am {} years old".format(BIRTHDAY, age)
+    BIRTHDAY = sys.argv[1]
+    message = "I am born on {}".format(BIRTHDAY)
     print(message)
 </code></pre>
+
+      <ul>
+        <li>By the way: "<strong>len</strong>" is a built-in function to return the length of a list</li>
+        <li>...and "<strong>sys.argv</strong>" is just a list of command line arguments
+        <li>The first argument is always the Python script filename</li>
+        <li>The second argument is supposed to be birthdate</li>
+      </ul>
+
   </section>
 </section>

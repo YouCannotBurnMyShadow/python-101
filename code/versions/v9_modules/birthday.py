@@ -1,5 +1,5 @@
 import sys
-from birth_date import get_future_date, get_weekday
+from utilities import get_future_date, get_weekday
 
 
 def main():
@@ -15,7 +15,8 @@ def main():
         return
     else:
         future_date = get_future_date(age)
-        weekday = get_weekday(future_date.isoweekday())
+        weekday_number = future_date.isoweekday()
+        weekday = get_weekday(weekday_number)
         message = "I will turn {} on {}, {}".format(age, weekday, future_date)
         print(message)
 

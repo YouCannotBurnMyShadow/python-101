@@ -1,0 +1,77 @@
+<section>
+  {% with active=active %}{% include "source/toc.html" %}{% endwith %}
+  <section>
+      <h2>Dictionaries</h2>
+
+      <ul>
+        <li>Dictionaries are so called "<strong>key-value-stores</strong>"</li>
+        <li>You can define an empty dictionary like this:
+            <pre><code class="python">my_dict = {}</code></pre></li>
+        <li>You can also define it with initial values:</li>
+      </ul>
+
+<pre><code class="python">my_dict = {
+    "Martin": 33,
+    "Eva": 24,
+}
+</code></pre>
+
+      <ul>
+        <li>You can access an item by it's key:
+            <pre><code class="python">martins_age = my_dict["Martin"]</code></pre></li>
+      </ul>
+
+    </script>
+  </section>
+
+  <section>
+      <h2>Exercise</h2>
+
+      <ul>
+        <li>Let's add the final piece to our program</li>
+        <li>We will write a function that returns the weekday name for a given weekday number</li>
+      </ul>
+
+<pre><code class="python" data-trim>
+import sys
+from datetime import datetime, date
+
+def get_weekday_name(weekday_number):
+    weekdays = {
+        1: "Monday",
+        2: "Tuesday",
+        3: "Wednesday",
+        4: "Thursday",
+        5: "Friday",
+        6: "Saturday",
+        7: "Sunday",
+    }
+    return weekdays[weekday_number]
+
+def get_future_date(base_date, years):
+    future_date = date(
+        base_date.year + years,
+        base_date.month,
+        base_date.day
+    )
+    return future_date
+
+if len(sys.argv) < 3:
+    print("ERROR: Please provide a date and an age")
+else:
+    try:
+        birthday = datetime.strptime(sys.argv[1], "%Y-%m-%d")
+    except ValueError:
+        print("ERROR: Please enter a correct date")
+        sys.exit()
+    years = int(sys.argv[2])
+    years_list = range(1, years + 1, 1)
+    for year in years_list:
+        future_date = get_future_date(birthday, year)
+        weekday = get_weekday_name(future_date.isoweekday())
+        message = "I will turn {} on {}, {}".format(year, weekday, future_date)
+        print(message)
+</code></pre>
+    </script>
+  </section>
+</section>

@@ -9,7 +9,7 @@
         * A char is a single character
         * Therefore, a whole word, is a long *string of characters*
       * The syntax for defining a string is this:
-        <pre><code>variable_name = "Your string"</code></pre>
+        <pre><code class="python">variable_name = "Your string"</code></pre>
     </script>
   </section>
 
@@ -18,16 +18,16 @@
       ##Strings
 
       * Like all things in Python, Strings are also Objects
-      * We will learn more about those later
-      * The cool thing about Objects is that they usually have useful methods
+      * For this workshop we will not worry about Objects.
+      * Just remember one thing: **Objects** usually have useful **methods**
       * Strings have a [ton of useful methods](https://docs.python.org/2/library/stdtypes.html#string-methods)
       * You can call string methods like this:
-        <pre><code>my_string = "Hello World!"
+        <pre><code class="python">my_string = "Hello World!"
 my_string = my_string.upper()
 print(my_string)
         </code></pre>
       * The output should look like this:
-        <pre><code>> HELLO WORLD!</code></pre>
+        <pre><code class="bash">> HELLO WORLD!</code></pre>
     </script>
   </section>
 
@@ -39,12 +39,12 @@ print(my_string)
       * It allows you to add placeholders into your strings
       * Then you can fill in variable values into those placeholders
       * It looks like this:
-        <pre><code>my_age = 33
+        <pre><code class="python">my_age = 33
 my_string = "I am {} years old".format(my_age)
 print(my_string)
         </code></pre>
       * The output should look like this:
-        <pre><code>> I am 33 years old</code></pre>
+        <pre><code class="bash">> I am 33 years old</code></pre>
     </script>
   </section>
 
@@ -55,7 +55,7 @@ print(my_string)
         <li>Change <strong>birthday.py</strong> to look like this:</li>
       </ul>
 
-<pre><code data-trim>
+<pre><code class="python" data-trim>
 BIRTHDAY = "1982-09-08"
 message = "I am born on {}".format(BIRTHDAY)
 print(message)

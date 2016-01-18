@@ -4,16 +4,18 @@
     <script type="text/template">
       ##Lists
 
-      * You can store many values into lists
-      * You can add or remove items from lists
       * You can define an empy list like this
-        <pre><code>my_variable = []</code></pre>
-      * You can define a list with initial elements like this:
-        <pre><code>my_variable = [1, 2, 3]</code></pre>
+        <pre><code class="python">my_variable = []</code></pre>
+      * You can store many values into lists
+        <pre><code class="python">my_variable = [1, 2, 3]</code></pre>
+      * You can add or remove items from lists
+        <pre><code class="python">my_variable.append(4)
+my_variable.remove(4)</code></pre>
       * You can access an item in the list by it's index:
-        <pre><code>my_variable[1]
+        <pre><code class="python">my_variable[1]
 # This should return `2`, because lists are zero-indexed
         </code></pre>
+      * Find out more about lists [here](https://docs.python.org/2/tutorial/datastructures.html#more-on-lists)
     </script>
   </section>
 
@@ -23,7 +25,7 @@
 
       * Here is a little example of things you can do with lists:
 
-<pre><code>numbers = [1, 2, 3]
+<pre><code class="python">numbers = [1, 2, 3]
 more_numbers = [4, 5, 6]
 all_numbers = numbers + more_numbers
 print(all_numbers)
@@ -44,48 +46,76 @@ print(all_numbers)
     </script>
   </section>
 
+  <section data-markdown>
+    <script type="text/template">
+      ##Tip: The Range Function
+
+      * "**range()**" is a built-in function
+      * It generates a list of numbers for you:
+        <pre><code class="python">my_list = range(100)
+my_other_list = range(1, 100, 1)
+print(my_list)
+print(my_other_list)
+        </code></pre>
+    </script>
+  </section>
+
+  <section>
+      <h2>Loops</h2>
+
+      <ul>
+        <li>You often need to repeat the same code in a loop</li>
+        <li>Loops look like this:</li>
+      </ul>
+
+<pre><code class="python" data-trim>
+var my_list = [1, 2, 3, 4]
+
+for my_number in my_list:
+    if my_number == 1:
+        continue
+    print (my_number)
+</code></pre>
+
+      <ul>
+        <li>You can use "<strong>continue</strong>" to skip this iteration of the loop</li>
+      </ul>
+
+  </section>
 
   <section>
       <h2>Exercise</h2>
 
       <ul>
-        <li>Let's write a function that returns the weekday for a given weekday number</li>
-        <li>Make <strong>birthday.py</strong> look like this:</li>
+        <li>Let's extend the output of our program so that it shows all future birthdays up to the provided age</li>
       </ul>
 
-<pre><code data-trim>
+<pre><code class="python" data-trim>
 import sys
-BIRTHDAY = "1982-09-08"
+from datetime import datetime, date
 
-def get_weekday(weekday_number):
-    weekdays = [
-        "Monday",
-        "Tuesday",
-        "Wednesday",
-        "Thursday",
-        "Friday",
-        "Saturday",
-        "Sunday",
-    ]
-    return weekdays[weekday_number - 1]
+def get_future_date(base_date, years):
+    future_date = date(
+        base_date.year + years,
+        base_date.month,
+        base_date.day
+    )
+    return future_date
 
-def main():
-    age = None
+if len(sys.argv) < 3:
+    print("ERROR: Please provide a date and an age")
+else:
     try:
-        age = int(sys.argv[1])
+        birthday = datetime.strptime(sys.argv[1], "%Y-%m-%d")
     except ValueError:
-        print("ERROR: Please enter an integer")
-        return
-
-    if age < 0:
-        print("ERROR: Negative ages are not allowed")
-        return
-    else:
-        message = "I am born {} and I am {} years old".format(BIRTHDAY, age)
+        print("ERROR: Please enter a correct date")
+        sys.exit()
+    years = int(sys.argv[2])
+    years_list = range(1, years + 1, 1)
+    for year in years_list:
+        future_date = get_future_date(birthday, year)
+        message = "I will turn {} on {}".format(year, future_date)
         print(message)
-
-main()
-print(get_weekday(1))
 </code></pre>
     </script>
   </section>
